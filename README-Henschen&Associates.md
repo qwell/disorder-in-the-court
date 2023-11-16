@@ -56,8 +56,6 @@ The bigger problem is the way documents are served to the user. When a user requ
 - [judyrecords.com](https://judyrecords.com), who handled the first round of blowback from court security issues.
 - The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 
-## Footnotes
-
 ## Definitions
 
 - **Enumeration**: The process of systematically probing a system to discover valuable information, such as document names or user accounts, by incrementing values in a URL or input field.
@@ -68,3 +66,5 @@ The bigger problem is the way documents are served to the user. When a user requ
 - **Cache Directory**: A temporary storage location on a computer where frequently accessed data is kept to speed up retrieval.
 - **AES128**: A specification for the encryption of electronic data, standing for Advanced Encryption Standard with a key size of 128 bits.
 - **Session Cookie**: A small piece of data sent from a website and stored by the user's web browser while the user is browsing, used to remember stateful information for the duration of the browsing session or some other expiry timeout.
+
+## Footnotes

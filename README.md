@@ -138,6 +138,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - The [CISA CVD Team](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) assisted with the coordination of these vulnerabilities.
 - [judyrecords.com](https://judyrecords.com), who handled the first round of blowback from court security issues.
 - The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
+- The furries, who provided me with plenty of amusement after I published my Bluesky / AT Protocol vulnerabilities. I see you.
 
 ## Contact
 

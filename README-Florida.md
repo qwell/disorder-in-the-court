@@ -6,33 +6,11 @@ Insufficient permission check vulnerabilities in eight public court record platf
 
 ## Details
 
-Each of the eight platforms are developed by separate entities. The first platform, used in Georgia, Mississippi, Ohio, and Tennessee, is [Catalis](https://catalisgov.com/)' CMS360. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms. The second platform, used in Georgia, is [Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus; in February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data. The third platform, used in Ohio, is [Henschen & Associates](https://henschen.com/)' CaseLook(?). Henschen & Associates did not respond after multiple reports and the vulnerability remains unresolved. Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
+Each of the eight platforms are developed by separate entities. Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
-
-### Catalis – CMS360
-
-To view documents, URLs with numeric document and case IDs were used. This allowed an unskilled attacker to stumble upon restricted documents by simply incrementing the document ID in the document URL.
-
-Many courts configured CMS360 to disallow document viewing altogether, making it very difficult to guess document IDs, so it is unclear whether documents could be viewed if document IDs were discovered. Many courts also require a login to view cases, so it is not known whether those courts allowed viewing images.
-
-### Tyler Technologies – Court Case Management Plus
-
-Multiple vulnerabilities were found in Court Case Management Plus.
-
-The first vulnerability was a mechanism that allowed an automatic passwordless login for any user, which was triggered by adding the query parameter `xyzldk=<username>` to the login URL; this was discovered through a simple Google search.
-
-The second is a pair of vulnerabilities due to the use of a component from [Aquaforest](https://www.aquaforest.com/) called TIFFServer. The first of the pair allows an attacker to enumerate the name of every file in a directory by adding the query parameter `PN=<number>` to `tssp.aspx`; if the file was a document, it could also be viewed. The second of the pair allows an attacker to enumerate every directory on the system, and even more concerning, the entire network, by using `tiffserver.aspx` and either `te003.aspx` or `te004.aspx`. Combining this pair of vulnerabilities gave an attacker an extraordinary level of access to files far beyond those in a court case. In a number of instances, the enumeration led to the discovery of directly downloadable files, including as-yet-unfiled warrant applications and backups of source code for nine separate Tyler Technologies platforms.
-
-In 2019, a similar vulnerability was discovered in TIFFServer ([CVE-2020-9323](https://nvd.nist.gov/vuln/detail/CVE-2020-9323)) by Quentin (paragonsec) Rhoads-Herrera of TEAMARES that allowed an attacker to know how many files were in a directory. A second vulnerability ([CVE-2020-9325](https://nvd.nist.gov/vuln/detail/CVE-2020-9325)) disclosed at the same time allowed an attacker to download arbitrary files. While it's fortunate that Court Case Management Plus was not affected by the latter vulnerability, it was only because the version being used was released an astonishing _14 years earlier_, in 2006.
-
-### Henschen & Associates – CaseLook
-
-Document URLs are obfuscated using a bizarre format that interposes parts of the case number with a hexadecimal docket ID that starts at zero and increments for every document in the case, the length of the docket ID in hexadecimal, the size of the file in hexadecimal, and the length in hexadecimal of the size of the file in hexadecimal. The only information an attacker wouldn't know is the size of the file. A brute force is possible, however, the enumerable space grows with each page in the document.
-
-The bigger problem is the way documents are served to the user. When a user requests the obfuscated document URL, a copy of the file is placed into a cache directory before being served to the user. Files in the cache directory are stored with incrementing numeric filenames that range from 0 to 32,767 (for reference: the Super Nintendo, released in 1991, can count to 65,535). The counter increments in an unknown way over time and is also incremented by 8 each time a new document is requested. If an attacker were to scan those filenames, they would eventually discover documents, including those with restrictions.
 
 ### Brevard County
 
@@ -67,7 +45,6 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-06-21 - Vulnerability #1 discovered in Monroe County.
 - 2023-07-04 - Report #1 sent to Monroe County – _no response_.
 - 2023-07-14 - Report #2 sent to Monroe County – _no response_.
-- 2023-07-17 - Vulnerability discovered in Catalis' CMS360.
 - 2023-08-?? - **Vulnerability #1 fixed in Monroe County.**
 - 2023-08-?? - Vulnerability #2 discovered in Monroe County.
 - 2023-09-14 - Report for all vulnerabilities sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli".
@@ -75,46 +52,24 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-09-15 - Vulnerability #1 discovered in Sarasota County.
 - 2023-09-16 - Vulnerability discovered in Hillsborough County.
 - 2023-09-18 - Vulnerability discovered in Brevard County.
-- 2023-09-30 - Report #1 for CMS360 sent to Catalis – _no response_.
-- 2023-10-02 - Report #2 for CMS360 sent to Catalis – _no response_.
 - 2023-10-02 - Report for all vulnerabilities sent to [CERT Coordination Center](https://www.kb.cert.org/vuls/) (CERT/CC).
 - 2023-10-03 - Report for all Florida court vulnerabilities sent to Florida's Office of the State Courts Administrator (OSCA).
-- 2023-10-03 - Report #3 for CMS360 sent to Catalis, detailing report to CERT/CC – _no response_.
 - 2023-10-04 - Report for all vulnerabilities sent to [Cybersecurity and Infrastructure Security Agency](https://cisa.gov) (CISA) by CERT/CC.
-- 2023-10-06 - Report #4 for CMS360 sent to Catalis, with disclosure timeline and CISA hand-off details – _no response_.
-- 2023-10-06 - Vulnerability #1 discovered in Tyler Technologies' Court Case Management Plus.
 - 2023-10-06 - Response from Florida OSCA.
 - 2023-10-06 - Report sent to Florida Court Clerks & Comptrollers by Florida OSCA.
-- 2023-10-07 - Vulnerabilities #2 and #3 discovered in Court Case Management Plus.
-- 2023-10-07 - Report for Court Case Management Plus sent to Tyler Technologies.
-- 2023-10-08 - Response from Tyler Technologies.
-- 2023-10-10 - Report for Court Case Management Plus sent to CISA.
-- 2023-10-10 - Vulnerability discovered in Henschen & Associates' CaseLook.
-- 2023-10-11 - Report #1 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-10-11 - **Vulnerability #1 fixed by Sarasota County.**
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
-- 2023-10-13 - Report #2 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-16 - Report #3 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-10-27 - **Vulnerability #2 fixed by Sarasota County.**
-- 2023-11-01 - **Vulnerabilities #1, #2, and #3 in Court Case Management Plus fixed by Tyler Technologies.**
-- 2023-11-01 - Response from Catalis, after discussion with CEO Scott Roza.
-- 2023-11-03 - **Vulnerability in CMS360 fixed by Catalis.**
-- 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
-- 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
 
 ## Overview by Platform
 
-| Vendor                  | Platform                   | IDs Available | Access | Fix Date   |
-| ----------------------- | -------------------------- | ------------- | ------ | ---------- |
-| Catalis / ICON Software | CMS360                     | No            | R      | 2023-11-03 |
-| Tyler Technologies      | Court Case Management Plus | Yes           | RUZ    | 2023-11-01 |
-| Henschen & Associates   | CaseLook                   | No            | R      |            |
-| Brevard County          |                            | Yes           | RU     |            |
-| Hillsborough County     |                            | Limited       | R      |            |
-| Lee County              |                            | Limited       | RZ     |            |
-| Monroe County           |                            | Yes           | R      |            |
-| Sarasota County         |                            | No            | R      | 2023-10-27 |
+| Vendor              | Platform | IDs Available | Access | Fix Date   |
+| ------------------- | -------- | ------------- | ------ | ---------- |
+| Brevard County      |          | Yes           | RU     |            |
+| Hillsborough County |          | Limited       | R      |            |
+| Lee County          |          | Limited       | RZ     |            |
+| Monroe County       |          | Yes           | R      |            |
+| Sarasota County     |          | No            | R      | 2023-10-27 |
 
 **Key**:
 
@@ -138,7 +93,6 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 
 ### Footnotes
 
-[^1]: _Catalis [states on their website](https://web.archive.org/web/20231005221308/https://catalisgov.com/our-story/) that "in less than five years [we have] strategically acquired and combined more than 30 public sector software companies". Learning and merging infrastructure after an acquisition takes a large amount of effort. Juggling 30 acquisitions would be a monumental undertaking that reduces focus on other necessary areas of business (e.g. securing legacy platforms)._
 [^2]: _This is very uncommon in other states. A guess as to why Florida does things so differently is that Florida's extensive open records or "sunshine" laws (see also "Florida Man") spawned platforms before commercial vendors began to enter the market. Unlike many states where court records are made available through a single state website, Florida generally allows each county to make decisions about which platforms they use, as long as they follow Florida's [Standards for Access to Electronic Court Records](https://web.archive.org/web/20230917165659/https://www.flcourts.gov/content/download/850949/file/standards-for-access-to-electronic-court-records-september-2022.pdf) and [Access Security Matrix](https://web.archive.org/web/20231005211829/https://www.flcourts.gov/content/download/858675/file/access-security-matrix-v13-january%202023.pdf)._
 
 ### Definitions

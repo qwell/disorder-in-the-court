@@ -130,7 +130,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
   - _U_ - Unredacted.
   - _Z_ - Attackers can view partial details of cases marked as restricted.
 
-### Acknowledgements
+## Acknowledgements
 
 - "Eli", who discovered the first set of court vulnerabilities and has been a major contributor throughout. _(Is this how most adults find and make friends?)_
 - Andrew Crocker and Hannah Zhao from the [Electronic Frontier Foundation](https://eff.org), who were there when I (and many, many others) needed them most.
@@ -141,12 +141,12 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - [judyrecords.com](https://judyrecords.com), who handled the first round of blowback from court security issues.
 - The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 
-### Footnotes
+## Footnotes
 
 [^1]: _Catalis [states on their website](https://web.archive.org/web/20231005221308/https://catalisgov.com/our-story/) that "in less than five years [we have] strategically acquired and combined more than 30 public sector software companies". Learning and merging infrastructure after an acquisition takes a large amount of effort. Juggling 30 acquisitions would be a monumental undertaking that reduces focus on other necessary areas of business (e.g. securing legacy platforms)._
 [^2]: _This is very uncommon in other states. A guess as to why Florida does things so differently is that Florida's extensive open records or "sunshine" laws (see also "Florida Man") spawned platforms before commercial vendors began to enter the market. Unlike many states where court records are made available through a single state website, Florida generally allows each county to make decisions about which platforms they use, as long as they follow Florida's [Standards for Access to Electronic Court Records](https://web.archive.org/web/20230917165659/https://www.flcourts.gov/content/download/850949/file/standards-for-access-to-electronic-court-records-september-2022.pdf) and [Access Security Matrix](https://web.archive.org/web/20231005211829/https://www.flcourts.gov/content/download/858675/file/access-security-matrix-v13-january%202023.pdf)._
 
-### Definitions
+## Definitions
 
 - **Enumeration**: The process of systematically probing a system to discover valuable information, such as document names or user accounts, by incrementing values in a URL or input field.
 - **Brute Force Attack**: A method of trial-and-error used to obtain information such as a password or PIN. In this case, it refers to repeatedly trying different document IDs to find restricted documents.

@@ -45,7 +45,7 @@ The bigger problem is the way documents are served to the user. When a user requ
   - _U_ - Unredacted.
   - _Z_ - Attackers can view partial details of cases marked as restricted.
 
-### Acknowledgements
+## Acknowledgements
 
 - "Eli", who discovered the first set of court vulnerabilities and has been a major contributor throughout. _(Is this how most adults find and make friends?)_
 - Andrew Crocker and Hannah Zhao from the [Electronic Frontier Foundation](https://eff.org), who were there when I (and many, many others) needed them most.
@@ -56,9 +56,9 @@ The bigger problem is the way documents are served to the user. When a user requ
 - [judyrecords.com](https://judyrecords.com), who handled the first round of blowback from court security issues.
 - The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 
-### Footnotes
+## Footnotes
 
-### Definitions
+## Definitions
 
 - **Enumeration**: The process of systematically probing a system to discover valuable information, such as document names or user accounts, by incrementing values in a URL or input field.
 - **Brute Force Attack**: A method of trial-and-error used to obtain information such as a password or PIN. In this case, it refers to repeatedly trying different document IDs to find restricted documents.

@@ -59,9 +59,18 @@ Many courts configured CMS360 to disallow document viewing altogether, making it
 - [judyrecords.com](https://judyrecords.com), who handled the first round of blowback from court security issues.
 - The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 
+## Contact
+
+- Email: [north@ꩰ.com](mailto:north@ꩰ.com)
+- Press: [press@jeltz.org](mailto:press@jeltz.org)
+- Mastodon: [@north@ꩰ.com](https://ꩰ.com/@north)
+- Twitch: [NorthAntara](https://twitch.tv/northantara)
+- YouTube: [NorthAntara](https://youtube.com/northantara)
+- Twitter: [NorthAntara](https://twitter.com/northantara)
+
 ## Sponsorship
 
-If you enjoy my work, consider becoming a sponsor on [Patreon](https://patreon.com/northantara) or [GitHub](https://github.com/sponsors/qwell/), and/or consider donating to the [Electronic Frontier Foundation](https://eff.org/donate) or [St. Jude](https://www.stjude.org/donate).
+- If you enjoy my work, consider becoming a sponsor on [Patreon](https://patreon.com/northantara) or [GitHub](https://github.com/sponsors/qwell/), and/or consider donating to the [Electronic Frontier Foundation](https://eff.org/donate) or [St. Jude](https://www.stjude.org/donate).
 
 ## Definitions
 

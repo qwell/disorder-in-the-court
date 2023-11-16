@@ -2,11 +2,13 @@
 
 ## Description
 
-Insufficient permission check vulnerabilities in eight public court record platforms used in five states allowed attackers to view sealed, confidential, unredacted, and/or otherwise restricted case documents. Affected documents include witness lists and testimony, mental health evaluations, child custody agreements, detailed allegations of abuse, corporate trade secrets, jury forms, and much more.
+Insufficient permission check vulnerabilities in public court record platforms from multiple vendors allowed attackers to view sealed, confidential, unredacted, and/or otherwise restricted case documents. Affected documents include witness lists and testimony, mental health evaluations, child custody agreements, detailed allegations of abuse, corporate trade secrets, jury forms, and much more.
 
 ## Details
 
-Each of the eight platforms are developed by separate entities. The third platform, used in Ohio, is [Henschen & Associates](https://henschen.com/)' CaseLook(?). Henschen & Associates did not respond after multiple reports and the vulnerability remains unresolved.
+Each of the platforms are developed by separate entities.
+
+- **[Henschen & Associates](https://henschen.com/)' CaseLook(?)** is used in Ohio. Henschen & Associates _did not respond after multiple reports_ and **the vulnerability remains unresolved**.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 

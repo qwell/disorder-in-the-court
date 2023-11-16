@@ -2,11 +2,16 @@
 
 ## Description
 
-Insufficient permission check vulnerabilities in eight public court record platforms used in five states allowed attackers to view sealed, confidential, unredacted, and/or otherwise restricted case documents. Affected documents include witness lists and testimony, mental health evaluations, child custody agreements, detailed allegations of abuse, corporate trade secrets, jury forms, and much more.
+Insufficient permission check vulnerabilities in public court record platforms from multiple vendors allowed attackers to view sealed, confidential, unredacted, and/or otherwise restricted case documents. Affected documents include witness lists and testimony, mental health evaluations, child custody agreements, detailed allegations of abuse, corporate trade secrets, jury forms, and much more.
 
 ## Details
 
-Each of the eight platforms are developed by separate entities. The first platform, used in Georgia, Mississippi, Ohio, and Tennessee, is [Catalis](https://catalisgov.com/)' CMS360. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms. The second platform, used in Georgia, is [Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus; in February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data. The third platform, used in Ohio, is [Henschen & Associates](https://henschen.com/)' CaseLook(?). Henschen & Associates did not respond after multiple reports and the vulnerability remains unresolved. Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
+Each of the platforms are developed by separate entities.
+
+- **[Catalis](https://catalisgov.com/)' CMS360** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
+- **[Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus** is used in Georgia. In February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
+- **[Henschen & Associates](https://henschen.com/)' CaseLook(?)** is used in Ohio. Henschen & Associates did not respond after multiple reports and the vulnerability remains unresolved.
+- Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 

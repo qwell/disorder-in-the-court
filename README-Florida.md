@@ -91,6 +91,10 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - [judyrecords.com](https://judyrecords.com), who handled the first round of blowback from court security issues.
 - The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 
+## Sponsorship
+
+If you enjoy my work, consider becoming a sponsor on [Patreon](https://patreon.com/northantara) or [GitHub](https://github.com/sponsors/qwell/), and/or consider donating to the [Electronic Frontier Foundation](https://eff.org/donate) or [St. Jude](https://www.stjude.org/donate).
+
 ## Definitions
 
 - **Enumeration**: The process of systematically probing a system to discover valuable information, such as document names or user accounts, by incrementing values in a URL or input field.

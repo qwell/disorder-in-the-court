@@ -145,7 +145,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 
 - **Enumeration**: The process of systematically probing a system to discover valuable information, such as document names or user accounts, by incrementing values in a URL or input field.
 - **Brute Force Attack**: A method of trial-and-error used to obtain information such as a password or PIN. In this case, it refers to repeatedly trying different document IDs to find restricted documents.
-- **Obfuscation**: The practice of making something difficult to understand. In a security context, obfuscation might be used to make files or code less readable, thereby hiding information from unauthorized users.
+- **Obfuscation**: The practice of making something difficult, but not impossible, to understand. In a security context, obfuscation might be used to make files or code less readable, thereby hiding information from unauthorized users.
 - **Developer Tools**: A set of tools included in most web browsers that allow developers to inspect the underlying code of a web page, monitor network requests, and test live JavaScript code among other functionalities.
 - **Query Parameter**: A way to pass data in a URL, typically used in GET requests to web servers, which can be manipulated for purposes such as accessing unauthorized data.
 - **Cache Directory**: A temporary storage location on a computer where frequently accessed data is kept to speed up retrieval.

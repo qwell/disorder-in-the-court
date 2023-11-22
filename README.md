@@ -10,7 +10,7 @@ Each of the platforms are developed by separate entities.
 
 - **[Catalis](https://catalisgov.com/)' CMS360** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
 - **[Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus** is used in Georgia. In February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
-- **[Henschen & Associates](https://henschen.com/)' CaseLook(?)** is used in Ohio. Henschen & Associates did not respond after multiple reports and the vulnerability remains unresolved.
+- **[Henschen & Associates](https://henschen.com/)' CaseLook(?)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 - Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
@@ -35,9 +35,11 @@ In 2019, a similar vulnerability was discovered in TIFFServer ([CVE-2020-9323](h
 
 ### Henschen & Associates – CaseLook
 
-Document URLs are obfuscated using a bizarre format that interposes parts of the case number with a hexadecimal docket ID that starts at zero and increments for every document in the case, the length of the docket ID in hexadecimal, the size of the file in hexadecimal, and the length in hexadecimal of the size of the file in hexadecimal. The only information an attacker wouldn't know is the size of the file. A brute force is possible, however, the enumerable space grows with each page in the document.
+Document URLs were obfuscated using a bizarre format that interposed parts of the case number with a hexadecimal docket ID that started at zero and incremented for every document in the case, the length of the docket ID in hexadecimal, the size of the file in hexadecimal, and the length in hexadecimal of the size of the file in hexadecimal. The only information an attacker wouldn't know is the size of the file. A brute force was possible, however, the enumerable space grew with each page in the document.
 
-The bigger problem is the way documents are served to the user. When a user requests the obfuscated document URL, a copy of the file is placed into a cache directory before being served to the user. Files in the cache directory are stored with incrementing numeric filenames that range from 0 to 32,767 (for reference: the Super Nintendo, released in 1991, can count to 65,535). The counter increments in an unknown way over time and is also incremented by 8 each time a new document is requested. If an attacker were to scan those filenames, they would eventually discover documents, including those with restrictions.
+The bigger problem was the way documents were served to the user. When a user requests a document URL, a copy of the file is placed into a cache directory before being served to the user. Files in the cache directory were stored with incrementing numeric filenames that ranged from 0 to 32,767 (for reference: the Super Nintendo, released in 1991, can count to 65,535). The counter incremented in an unknown way over time and was also incremented by 8 each time a new document was requested. If an attacker were to scan those filenames, they would have eventually discover documents, including those with restrictions.
+
+Although Henschen & Associates eventually fixed the vulnerability, they did not ever respond to reports. This type of behavior is disrespectful to reporters of vulnerabilities and should give customers pause; if no response is received, future reporters may instead decide to sell or exploit their discoveries.
 
 ### Brevard County
 
@@ -105,6 +107,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-11-03 - **Vulnerability in CMS360 fixed by Catalis.**
 - 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
+- 2023-11-22 - **Vulnerability in CaseLook fixed by Henschen & Associates.**
 
 ## Overview by Platform
 
@@ -112,7 +115,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 | ----------------------- | -------------------------- | ------------- | ------ | ---------- |
 | Catalis / ICON Software | CMS360                     | No            | R      | 2023-11-03 |
 | Tyler Technologies      | Court Case Management Plus | Yes           | RUZ    | 2023-11-01 |
-| Henschen & Associates   | CaseLook                   | No            | R      |            |
+| Henschen & Associates   | CaseLook                   | No            | R      | 2023-11-22 |
 | Brevard County          |                            | Yes           | RU     |            |
 | Hillsborough County     |                            | Limited       | R      |            |
 | Lee County              |                            | Limited       | RZ     |            |

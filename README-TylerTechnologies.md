@@ -31,7 +31,7 @@ In 2019, a similar vulnerability was discovered in TIFFServer ([CVE-2020-9323](h
 - 2023-10-07 - Report for Court Case Management Plus sent to Tyler Technologies.
 - 2023-10-08 - Response from Tyler Technologies.
 - 2023-10-10 - Report for Court Case Management Plus sent to CISA.
-- 2023-11-01 - **Vulnerabilities #1, #2, and #3 in Court Case Management Plus fixed by Tyler Technologies.**
+- 2023-11-01 - **Vulnerabilities #1, #2, and #3 in Court Case Management Plus confirmed fixed by Tyler Technologies.**
 
 ## Overview by Platform
 
@@ -56,9 +56,9 @@ In 2019, a similar vulnerability was discovered in TIFFServer ([CVE-2020-9323](h
 - [Jaku](https://twitter.com/Jaku) founder of [Crowd Control](https://crowdcontrol.live/), who frequently offered his cybersecurity wisdom and experience.
 - [Zack Whitaker](https://techcrunch.com/author/zack-whittaker/) from [TechCrunch](https://techcrunch.com), who immediately recognized the severity and jumped at the chance to learn more.
 - [judyrecords.com](https://judyrecords.com), who handled the first round of fallout from court security issues.
-- The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
+- The Arkansas [Administrative Office of the Courts](https://arcourts.gov/), who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 - The [CISA CVD Team](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) assisted with the coordination of these vulnerabilities.
-- Dedications to the furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
+- Dedications to the Fediverse furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
 
 ## Contact
 

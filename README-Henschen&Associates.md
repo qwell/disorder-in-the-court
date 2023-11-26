@@ -31,7 +31,7 @@ Although Henschen & Associates eventually fixed the vulnerability, they did not 
 - 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
-- 2023-11-22 - **Vulnerability in CaseLook fixed by Henschen & Associates.**
+- 2023-11-22 - **Vulnerability in CaseLook confirmed fixed by Henschen & Associates.**
 
 ## Overview by Platform
 
@@ -56,9 +56,9 @@ Although Henschen & Associates eventually fixed the vulnerability, they did not 
 - [Jaku](https://twitter.com/Jaku) founder of [Crowd Control](https://crowdcontrol.live/), who frequently offered his cybersecurity wisdom and experience.
 - [Zack Whitaker](https://techcrunch.com/author/zack-whittaker/) from [TechCrunch](https://techcrunch.com), who immediately recognized the severity and jumped at the chance to learn more.
 - [judyrecords.com](https://judyrecords.com), who handled the first round of fallout from court security issues.
-- The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
+- The Arkansas [Administrative Office of the Courts](https://arcourts.gov/), who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 - The [CISA CVD Team](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) assisted with the coordination of these vulnerabilities.
-- Dedications to the furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
+- Dedications to the Fediverse furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
 
 ## Contact
 

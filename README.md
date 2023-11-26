@@ -73,7 +73,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-07-04 - Report #1 sent to Monroe County – _no response_.
 - 2023-07-14 - Report #2 sent to Monroe County – _no response_.
 - 2023-07-17 - Vulnerability discovered in Catalis' CMS360.
-- 2023-08-?? - **Vulnerability #1 fixed in Monroe County.**
+- 2023-08-?? - **Vulnerability #1 confirmed fixed in Monroe County.**
 - 2023-08-?? - Vulnerability #2 discovered in Monroe County.
 - 2023-09-14 - Report for all vulnerabilities sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli".
 - 2023-09-15 - Vulnerability discovered in Lee County.
@@ -96,18 +96,18 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-10-10 - Report for Court Case Management Plus sent to CISA.
 - 2023-10-10 - Vulnerability discovered in Henschen & Associates' CaseLook.
 - 2023-10-11 - Report #1 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-11 - **Vulnerability #1 fixed by Sarasota County.**
+- 2023-10-11 - **Vulnerability #1 confirmed fixed by Sarasota County.**
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
 - 2023-10-13 - Report #2 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-10-16 - Report #3 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-27 - **Vulnerability #2 fixed by Sarasota County.**
-- 2023-11-01 - **Vulnerabilities #1, #2, and #3 in Court Case Management Plus fixed by Tyler Technologies.**
+- 2023-10-27 - **Vulnerability #2 confirmed fixed by Sarasota County.**
+- 2023-11-01 - **Vulnerabilities #1, #2, and #3 in Court Case Management Plus confirmed fixed by Tyler Technologies.**
 - 2023-11-01 - Response from Catalis, after discussion with CEO Scott Roza.
-- 2023-11-03 - **Vulnerability in CMS360 fixed by Catalis.**
+- 2023-11-03 - **Vulnerability in CMS360 confirmed fixed by Catalis.**
 - 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
-- 2023-11-22 - **Vulnerability in CaseLook fixed by Henschen & Associates.**
+- 2023-11-22 - **Vulnerability in CaseLook confirmed fixed by Henschen & Associates.**
 
 ## Overview by Platform
 
@@ -139,9 +139,9 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - [Jaku](https://twitter.com/Jaku) founder of [Crowd Control](https://crowdcontrol.live/), who frequently offered his cybersecurity wisdom and experience.
 - [Zack Whitaker](https://techcrunch.com/author/zack-whittaker/) from [TechCrunch](https://techcrunch.com), who immediately recognized the severity and jumped at the chance to learn more.
 - [judyrecords.com](https://judyrecords.com), who handled the first round of fallout from court security issues.
-- The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
+- The Arkansas [Administrative Office of the Courts](https://arcourts.gov/), who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 - The [CISA CVD Team](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) assisted with the coordination of these vulnerabilities.
-- Dedications to the furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
+- Dedications to the Fediverse furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
 
 ## Contact
 

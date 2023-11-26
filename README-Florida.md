@@ -45,7 +45,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-06-21 - Vulnerability #1 discovered in Monroe County.
 - 2023-07-04 - Report #1 sent to Monroe County – _no response_.
 - 2023-07-14 - Report #2 sent to Monroe County – _no response_.
-- 2023-08-?? - **Vulnerability #1 fixed in Monroe County.**
+- 2023-08-?? - **Vulnerability #1 confirmed fixed in Monroe County.**
 - 2023-08-?? - Vulnerability #2 discovered in Monroe County.
 - 2023-09-14 - Report for all vulnerabilities sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli".
 - 2023-09-15 - Vulnerability discovered in Lee County.
@@ -57,9 +57,9 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-10-04 - Report for all vulnerabilities sent to [Cybersecurity and Infrastructure Security Agency](https://cisa.gov) (CISA) by CERT/CC.
 - 2023-10-06 - Response from Florida OSCA.
 - 2023-10-06 - Report sent to Florida Court Clerks & Comptrollers by Florida OSCA.
-- 2023-10-11 - **Vulnerability #1 fixed by Sarasota County.**
+- 2023-10-11 - **Vulnerability #1 confirmed fixed by Sarasota County.**
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
-- 2023-10-27 - **Vulnerability #2 fixed by Sarasota County.**
+- 2023-10-27 - **Vulnerability #2 confirmed fixed by Sarasota County.**
 
 ## Overview by Platform
 
@@ -88,9 +88,9 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - [Jaku](https://twitter.com/Jaku) founder of [Crowd Control](https://crowdcontrol.live/), who frequently offered his cybersecurity wisdom and experience.
 - [Zack Whitaker](https://techcrunch.com/author/zack-whittaker/) from [TechCrunch](https://techcrunch.com), who immediately recognized the severity and jumped at the chance to learn more.
 - [judyrecords.com](https://judyrecords.com), who handled the first round of fallout from court security issues.
-- The State of Arkansas, who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
+- The Arkansas [Administrative Office of the Courts](https://arcourts.gov/), who allowed me to present my findings in an effort to avoid the same pitfalls when building their own court platform.
 - The [CISA CVD Team](https://www.cisa.gov/coordinated-vulnerability-disclosure-process) assisted with the coordination of these vulnerabilities.
-- Dedications to the furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
+- Dedications to the Fediverse furries, who provided plenty of amusement after my Bluesky / AT Protocol vulnerability publications. I see you.
 
 ## Contact
 

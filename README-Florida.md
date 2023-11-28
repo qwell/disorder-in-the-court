@@ -18,19 +18,19 @@ While all of the platforms allowed unintended public access to restricted docume
 
 Document URLs contain a version of the document ID that is encrypted using a method that includes an expiry mechanism. Although every docket entry displays the associated document ID, the encrypted form -- which is required to view documents -- is only provided for documents that the user has access to. This would be a great method that enables sharing of documents for a limited time, but for one fatal flaw.
 
-Along with the encrypted document ID, the URLs also contained the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES128. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs included the parameter `isRedacted=` which, as the name suggests, accepted the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
+Along with the encrypted document ID, the URLs also contain the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs included the parameter `isRedacted=` which, as the name suggests, accepts the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
 
 ### Hillsborough County
 
-Session cookies were used to determine which cases and documents a user was viewing. When a case or document was requested, a request was sent to the API, which associated the data with the user's session cookie and returned the results. The API endpoint for obtaining document information returned a list that included the document ID, several values that specify the security level required to view the document, and the user's applied access level. The frontend chose whether to display a document link or one of the restriction type indicators based on the applied access level. The backend assumed that if an attacker is able to request a document, they must have access to it.
+Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. The API endpoint for obtaining document information returns a list that includes the document ID, several values that specify the security level required to view the document, and the user's applied access level. The frontend chooses whether to display a document link or one of the restriction type indicators based on the applied access level. The backend assumes that if an attacker is able to request a document, they must have access to it.
 
 ### Lee County
 
-Session cookies were used in a manner similar to Hillsborough County. For most types of cases, document IDs were available in the pre-rendered HTML. Documents could be viewed by executing a single function in the site's JavaScript source code.
+Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Documents can be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
 
 ### Monroe County
 
-A similar vulnerability was discovered initially, but their change introduced a new vulnerability. Much like Hillsborough County, the frontend chose whether to display a document link based on the security level of the document and the backend made a bad assumption. After fixing the first vulnerability, the developers helpfully left a debugger statement one line before these checks are made, which pauses code execution and gave the attacker a chance to adjust the security level.
+A similar vulnerability was discovered initially, but their change introduced a new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before these checks are made, which paused code execution and gave an attacker a chance to adjust the security level and exploit the second vulnerability. The debugger statement has since been removed, and the backend no longer returns valid document IDs for restricted documents, but the backend still accepts restricted document IDs.
 
 ### Sarasota County
 
@@ -60,6 +60,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-10-11 - **Vulnerability #1 confirmed fixed by Sarasota County.**
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
 - 2023-10-27 - **Vulnerability #2 confirmed fixed by Sarasota County.**
+- 2023-11-28 - **Vulnerability #2 confirmed partially fixed by Monroe County.**
 
 ## Overview by Platform
 

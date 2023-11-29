@@ -20,6 +20,8 @@ To view documents, URLs with numeric document and case IDs were used. This allow
 
 Many courts configured CMS360 to disallow document viewing altogether, making it very difficult to guess document IDs, so it is unclear whether documents could be viewed if document IDs were discovered. Many courts also require a login to view cases, so it is not known whether those courts allowed viewing images.
 
+- [CVE-2023-6341](https://nvd.nist.gov/vuln/detail/CVE-2023-6341): Catalis (previously Icon Software) CMS 360 allows a remote, unauthenticated attacker to view sensitive court documents by modifying document and other identifiers in URLs. The impact varies based on the intention and configuration of a specific CMS360 installation.
+
 ## Timeline
 
 - 2023-07-17 - Vulnerability discovered in Catalis' CMS360.

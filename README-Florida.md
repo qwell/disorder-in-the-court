@@ -69,7 +69,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 | Brevard County      |          | Yes           | RU     |            |
 | Hillsborough County |          | Limited       | R      |            |
 | Lee County          |          | Limited       | RZ     |            |
-| Monroe County       |          | Yes           | R      |            |
+| Monroe County       |          | Yes           | R      | 2023-11-28 |
 | Sarasota County     |          | No            | R      | 2023-10-27 |
 
 **Key**:

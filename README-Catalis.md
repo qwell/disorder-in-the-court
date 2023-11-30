@@ -6,7 +6,7 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-- **[Catalis - CMS360](#catalis--cms360)** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
+- **[Catalis - CMS360](#catalis---cms360)** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied based on the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 

@@ -8,31 +8,31 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 Many of the platforms are developed by separate entities.
 
-- Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
+- Five platforms used by individual courts in Florida -- [Brevard County](#brevard-county-florida), [Hillsborough County](#hillsborough-county-florida), [Lee County](#lee-county-florida), [Monroe County](#monroe-county-florida), and [Sarasota County](#sarasota-county-florida) -- are each presumed to be developed "in-house"[^2] by the county court.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
 
-### Brevard County
+### Brevard County, Florida
 
 Document URLs contain a version of the document ID that is encrypted using a method that includes an expiry mechanism. Although every docket entry displays the associated document ID, the encrypted form -- which is required to view documents -- is only provided for documents that the user has access to. This would be a great method that enables sharing of documents for a limited time, but for one fatal flaw.
 
 Along with the encrypted document ID, the URLs also contain the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs included the parameter `isRedacted=` which, as the name suggests, accepts the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
 
-### Hillsborough County
+### Hillsborough County, Florida
 
 Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. The API endpoint for obtaining document information returns a list that includes the document ID, several values that specify the security level required to view the document, and the user's applied access level. The frontend chooses whether to display a document link or one of the restriction type indicators based on the applied access level. The backend assumes that if an attacker is able to request a document, they must have access to it.
 
-### Lee County
+### Lee County, Florida
 
 Session cookies are used to determine which cases and documents a user was viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Restricted documents could be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
 
-### Monroe County
+### Monroe County, Florida
 
 A similar vulnerability was discovered initially, but their change introduced a new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before these checks are made, which paused code execution and gave an attacker a chance to adjust the security level and exploit the second vulnerability. The debugger statement has since been removed, and the backend no longer returns valid document IDs for restricted documents, but the backend still accepts restricted document IDs.
 
-### Sarasota County
+### Sarasota County, Florida
 
 In what is certainly the most egregious of the Florida county vulnerabilities, document URLs contained nothing more than a numeric document ID. The only protection was a CAPTCHA on the landing page, which could be bypassed.
 

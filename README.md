@@ -8,17 +8,17 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 Many of the platforms are developed by separate entities.
 
-- **[Catalis](https://catalisgov.com/)' CMS360** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
-- **[Henschen & Associates](https://henschen.com/)' CaseLook** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
-- **[Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus** is used in Georgia. In February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
-- Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
+- **[Catalis - CMS360](#catalis-–-cms360)** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
+- **[Henschen & Associates - CaseLook](#henschen--associates-–-caselook)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
+- **[Tyler Technologies - Court Case Management Plus](#tyler-technologies-–-court-case-management-plus)** is used in Georgia. In February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
+- Five platforms used by individual courts in Florida -- **[Brevard County](#brevard-county-florida)**, **[Hillsborough County](#hillsborough-county-florida)**, **[Lee County](#lee-county-florida)**, **[Monroe County](#monroe-county-florida)**, and **[Sarasota County](#sarasota-county-florida)** -- are each presumed to be developed "in-house"[^2] by the county court.
 - _Note: Additional platforms from other vendors that are known to be vulnerable will be included in future disclosures._
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
 
-### Catalis – CMS360
+### [Catalis](https://catalisgov.com/) – CMS360
 
 To view documents, URLs with numeric document and case IDs were used. This allowed an unskilled attacker to stumble upon restricted documents by simply incrementing the document ID in the document URL.
 
@@ -26,7 +26,7 @@ Many courts configured CMS360 to disallow document viewing altogether, making it
 
 - [CVE-2023-6341](https://nvd.nist.gov/vuln/detail/CVE-2023-6341): Catalis (previously Icon Software) CMS 360 allows a remote, unauthenticated attacker to view sensitive court documents by modifying document and other identifiers in URLs. The impact varies based on the intention and configuration of a specific CMS360 installation.
 
-### Henschen & Associates – CaseLook
+### [Henschen & Associates](https://henschen.com/) – CaseLook
 
 Document URLs were obfuscated using a bizarre format that interposed parts of the case number with a docket ID that started at zero and incremented for every document in the case, the length of the docket ID, the size of the file, and the length of the size of the file. The only information an attacker wouldn't know is the size of the file. A brute force was possible, however, the enumerable space grew with each page in the document.
 
@@ -36,7 +36,7 @@ Although Henschen & Associates eventually fixed the vulnerability, they did not 
 
 - [CVE-2023-6376](https://nvd.nist.gov/vuln/detail/CVE-2023-6376): Henschen & Associates court document management software does not sufficiently randomize file names of cached documents, allowing a remote, unauthenticated attacker to access restricted documents.
 
-### Tyler Technologies – Court Case Management Plus
+### [Tyler Technologies](https://www.tylertech.com/) – Court Case Management Plus
 
 Multiple vulnerabilities were found in Court Case Management Plus.
 
@@ -54,25 +54,25 @@ In 2019, a similar vulnerability in TIFFServer ([CVE-2020-9323](https://nvd.nist
 - [CVE-2023-6375](https://nvd.nist.gov/vuln/detail/CVE-2023-6375): Tyler Technologies Court Case Management Plus may store backups in a location that can be accessed by a remote, unauthenticated attacker. Backups may contain sensitive information such as database credentials.
 - [CVE-2023-6352](https://nvd.nist.gov/vuln/detail/CVE-2023-6352): The default configuration of Aquaforest TIFF Server allows access to arbitrary file paths, subject to any restrictions imposed by Internet Information Services (IIS) or Microsoft Windows. Depending on how a web application uses and configures TIFF Server, a remote attacker may be able to enumerate files or directories, traverse directories, bypass authentication, or access restricted files.
 
-### Brevard County
+### Brevard County, Florida
 
 Document URLs contain a version of the document ID that is encrypted using a method that includes an expiry mechanism. Although every docket entry displays the associated document ID, the encrypted form -- which is required to view documents -- is only provided for documents that the user has access to. This would be a great method that enables sharing of documents for a limited time, but for one fatal flaw.
 
 Along with the encrypted document ID, the URLs also contain the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs included the parameter `isRedacted=` which, as the name suggests, accepts the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
 
-### Hillsborough County
+### Hillsborough County, Florida
 
 Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. The API endpoint for obtaining document information returns a list that includes the document ID, several values that specify the security level required to view the document, and the user's applied access level. The frontend chooses whether to display a document link or one of the restriction type indicators based on the applied access level. The backend assumes that if an attacker is able to request a document, they must have access to it.
 
-### Lee County
+### Lee County, Florida
 
 Session cookies are used to determine which cases and documents a user was viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Restricted documents could be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
 
-### Monroe County
+### Monroe County, Florida
 
 A similar vulnerability was discovered initially, but their change introduced a new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before these checks are made, which paused code execution and gave an attacker a chance to adjust the security level and exploit the second vulnerability. The debugger statement has since been removed, and the backend no longer returns valid document IDs for restricted documents, but the backend still accepts restricted document IDs.
 
-### Sarasota County
+### Sarasota County, Florida
 
 In what is certainly the most egregious of the Florida county vulnerabilities, document URLs contained nothing more than a numeric document ID. The only protection was a CAPTCHA on the landing page, which could be bypassed.
 

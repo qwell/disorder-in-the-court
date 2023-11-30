@@ -8,13 +8,13 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 Many of the platforms are developed by separate entities.
 
-- **[Henschen & Associates](https://henschen.com/)' CaseLook** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
+- **[Henschen & Associates - CaseLook](#henschen--associates-–-caselook)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
 
-### Henschen & Associates – CaseLook
+### [Henschen & Associates](https://henschen.com/) – CaseLook
 
 Document URLs were obfuscated using a bizarre format that interposed parts of the case number with a docket ID that started at zero and incremented for every document in the case, the length of the docket ID, the size of the file, and the length of the size of the file. The only information an attacker wouldn't know is the size of the file. A brute force was possible, however, the enumerable space grew with each page in the document.
 

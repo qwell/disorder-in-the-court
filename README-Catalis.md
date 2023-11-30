@@ -33,7 +33,7 @@ Many courts configured CMS360 to disallow document viewing altogether, making it
 - 2023-10-04 - Report for all vulnerabilities sent to [Cybersecurity and Infrastructure Security Agency](https://cisa.gov) (CISA) by CERT/CC.
 - 2023-10-06 - Report #4 for CMS360 sent to Catalis, with disclosure timeline and CISA hand-off details – _no response_.
 - 2023-11-01 - Response from Catalis, after discussion with CEO Scott Roza.
-- 2023-11-03 - **Vulnerability in CMS360 confirmed fixed by Catalis.**
+- 2023-11-03 - **Vulnerability confirmed fixed in CMS360.**
 
 ## Overview by Platform
 

@@ -33,7 +33,7 @@ Although Henschen & Associates eventually fixed the vulnerability, they did not 
 - 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
-- 2023-11-22 - **Vulnerability in CaseLook confirmed fixed by Henschen & Associates.**
+- 2023-11-22 - **Vulnerability confirmed fixed in CaseLook.**
 
 ## Overview by Platform
 

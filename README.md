@@ -109,20 +109,20 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-10-10 - Report for Court Case Management Plus sent to CISA.
 - 2023-10-10 - Vulnerability discovered in Henschen & Associates' CaseLook.
 - 2023-10-11 - Report #1 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-11 - **Vulnerability #1 confirmed fixed by Sarasota County.**
+- 2023-10-11 - **Vulnerability #1 confirmed fixed in Sarasota County.**
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
 - 2023-10-13 - Report #2 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-10-16 - Report #3 for CaseLook sent to Henschen & Associates – _no response_.
 - 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-27 - **Vulnerability #2 confirmed fixed by Sarasota County.**
-- 2023-11-01 - **Vulnerabilities #1, #2, and #3 in Court Case Management Plus confirmed fixed by Tyler Technologies.**
+- 2023-10-27 - **Vulnerability #2 confirmed fixed in Sarasota County.**
+- 2023-11-01 - **Vulnerabilities #1, #2, and #3 confirmed fixed in Court Case Management Plus.**
 - 2023-11-01 - Response from Catalis, after discussion with CEO Scott Roza.
-- 2023-11-03 - **Vulnerability in CMS360 confirmed fixed by Catalis.**
+- 2023-11-03 - **Vulnerability confirmed fixed in CMS360.**
 - 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
-- 2023-11-22 - **Vulnerability in CaseLook confirmed fixed by Henschen & Associates.**
-- 2023-11-28 - **Vulnerability #2 confirmed partially fixed by Monroe County.**
-- 2023-11-29 - **Vulnerability confirmed fixed by Lee County.**
+- 2023-11-22 - **Vulnerability confirmed fixed in CaseLook.**
+- 2023-11-28 - **Vulnerability #2 confirmed partially fixed in Monroe County.**
+- 2023-11-29 - **Vulnerability confirmed fixed in Lee County.**
 
 ## Overview by Platform
 

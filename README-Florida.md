@@ -57,11 +57,11 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-10-04 - Report for all vulnerabilities sent to [Cybersecurity and Infrastructure Security Agency](https://cisa.gov) (CISA) by CERT/CC.
 - 2023-10-06 - Response from Florida OSCA.
 - 2023-10-06 - Report sent to Florida Court Clerks & Comptrollers by Florida OSCA.
-- 2023-10-11 - **Vulnerability #1 confirmed fixed by Sarasota County.**
+- 2023-10-11 - **Vulnerability #1 confirmed fixed in Sarasota County.**
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
-- 2023-10-27 - **Vulnerability #2 confirmed fixed by Sarasota County.**
-- 2023-11-28 - **Vulnerability #2 confirmed partially fixed by Monroe County.**
-- 2023-11-29 - **Vulnerability confirmed fixed by Lee County.**
+- 2023-10-27 - **Vulnerability #2 confirmed fixed in Sarasota County.**
+- 2023-11-28 - **Vulnerability #2 confirmed partially fixed in Monroe County.**
+- 2023-11-29 - **Vulnerability confirmed fixed in Lee County.**
 
 ## Overview by Platform
 

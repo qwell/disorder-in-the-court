@@ -70,12 +70,11 @@ In 2019, a similar vulnerability in TIFFServer ([CVE-2020-9323](https://nvd.nist
 
 ## Contact
 
+[Jason Parker](https://linktr.ee/northantara)
+
 - Email: [north@ꩰ.com](mailto:north@ꩰ.com)
 - Press: [press@jeltz.org](mailto:press@jeltz.org)
 - Mastodon: [@north@ꩰ.com](https://ꩰ.com/@north)
-- Twitch: [NorthAntara](https://twitch.tv/northantara)
-- YouTube: [NorthAntara](https://youtube.com/northantara)
-- Twitter: [NorthAntara](https://twitter.com/northantara)
 
 ## Sponsorship
 

@@ -82,7 +82,7 @@ Many courts configured CMS360 to disallow document viewing altogether, making it
 - **Developer Tools**: A set of tools included in most web browsers that allow developers to inspect the underlying code of a web page, monitor network requests, and test live JavaScript code among other functionalities.
 - **Query Parameter**: A way to pass data in a URL, typically used in GET requests to web servers, which can be manipulated for purposes such as accessing unauthorized data.
 - **Cache Directory**: A temporary storage location on a computer where frequently accessed data is kept to speed up retrieval.
-- **AES128**: A specification for the encryption of electronic data, standing for Advanced Encryption Standard with a key size of 128 bits.
+- **AES**: A specification for the encryption of electronic data, standing for Advanced Encryption Standard.
 - **Session Cookie**: A small piece of data sent from a website and stored by the user's web browser while the user is browsing, used to remember stateful information for the duration of the browsing session or some other expiry timeout.
 
 ## Footnotes

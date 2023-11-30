@@ -58,11 +58,11 @@ In 2019, a similar vulnerability in TIFFServer ([CVE-2020-9323](https://nvd.nist
 
 Document URLs contain a version of the document ID that is encrypted using a method that includes an expiry mechanism. Although every docket entry displays the associated document ID, the encrypted form -- which is required to view documents -- is only provided for documents that the user has access to. This would be a great method that enables sharing of documents for a limited time, but for one fatal flaw.
 
-Along with the encrypted document ID, the URLs also contain the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs included the parameter `isRedacted=` which, as the name suggests, accepts the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
+Along with the encrypted document ID, the URLs also contain the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs include the parameter `isRedacted=` which, as the name suggests, accepts the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
 
 ### Hillsborough County, Florida
 
-Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. The API endpoint for obtaining document information returns a list that includes the document ID, several values that specify the security level required to view the document, and the user's applied access level. The frontend chooses whether to display a document link or one of the restriction type indicators based on the applied access level. The backend assumes that if an attacker is able to request a document, they must have access to it.
+Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. The API endpoint for obtaining document information returns a list that includes the document ID, several values that specify the security level required to view the document, and the user's applied access level. The frontend chooses whether to display a document link or one of the restriction type indicators based on the applied access level. The backend assumes that if an attacker is able to request a document, they must have access to it. An attacker can view restricted documents by changing the security level to a more permissive value.
 
 ### Lee County, Florida
 
@@ -70,11 +70,11 @@ Session cookies are used to determine which cases and documents a user was viewi
 
 ### Monroe County, Florida
 
-A similar vulnerability was discovered initially, but their change introduced a new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before these checks are made, which paused code execution and gave an attacker a chance to adjust the security level and exploit the second vulnerability. The debugger statement has since been removed, and the backend no longer returns valid document IDs for restricted documents, but the backend still accepts restricted document IDs.
+A similar vulnerability was discovered initially, however their attempted fix introduced this new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before the security level was checked, which paused code execution and gave an attacker a chance to adjust the security level and exploit this vulnerability. The debugger statement has since been removed and the backend no longer returns valid document IDs for restricted documents, however the backend still accepts restricted document IDs.
 
 ### Sarasota County, Florida
 
-In what is certainly the most egregious of the Florida county vulnerabilities, document URLs contained nothing more than a numeric document ID. The only protection was a CAPTCHA on the landing page, which could be bypassed.
+In what is certainly the most egregious of the Florida county vulnerabilities, document URLs contained nothing more than a numeric document ID. An attacker could view restricted documents by simply incrementing the document ID in the URL. The only protection was a CAPTCHA on the landing page, which could be bypassed.
 
 Due to the triviality of discovering this vulnerability and the ease with which it could be exploited on a mass scale, it is reasonable to assume that every document became compromised the moment it was filed.
 

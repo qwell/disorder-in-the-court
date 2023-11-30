@@ -8,7 +8,7 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 Each of the platforms are developed by separate entities.
 
-- **[Henschen & Associates](https://henschen.com/)' CaseLook(?)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
+- **[Henschen & Associates](https://henschen.com/)' CaseLook** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied due to the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 

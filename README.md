@@ -9,8 +9,8 @@ Insufficient permission check vulnerabilities in public court record platforms f
 Each of the platforms are developed by separate entities.
 
 - **[Catalis](https://catalisgov.com/)' CMS360** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
+- **[Henschen & Associates](https://henschen.com/)' CaseLook** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 - **[Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus** is used in Georgia. In February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
-- **[Henschen & Associates](https://henschen.com/)' CaseLook(?)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 - Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
 - _Note: Future disclosures will include other platforms that are known to be vulnerable._
 
@@ -25,6 +25,14 @@ To view documents, URLs with numeric document and case IDs were used. This allow
 Many courts configured CMS360 to disallow document viewing altogether, making it very difficult to guess document IDs, so it is unclear whether documents could be viewed if document IDs were discovered. Many courts also require a login to view cases, so it is not known whether those courts allowed viewing images.
 
 - [CVE-2023-6341](https://nvd.nist.gov/vuln/detail/CVE-2023-6341): Catalis (previously Icon Software) CMS 360 allows a remote, unauthenticated attacker to view sensitive court documents by modifying document and other identifiers in URLs. The impact varies based on the intention and configuration of a specific CMS360 installation.
+
+### Henschen & Associates – CaseLook
+
+Document URLs were obfuscated using a bizarre format that interposed parts of the case number with a hexadecimal docket ID that started at zero and incremented for every document in the case, the length of the docket ID in hexadecimal, the size of the file in hexadecimal, and the length in hexadecimal of the size of the file in hexadecimal. The only information an attacker wouldn't know is the size of the file. A brute force was possible, however, the enumerable space grew with each page in the document.
+
+The bigger problem was the way documents were served to the user. When a user requests a document URL, a copy of the file is placed into a cache directory before being served to the user. Files in the cache directory were stored with incrementing numeric filenames that ranged from 0 to 32,767 (for reference: the Super Nintendo, released in 1991, can count to 65,535). The counter incremented in an unknown way over time and was also incremented by 8 each time a new document was requested. If an attacker were to scan those filenames, they would have eventually discover documents, including those with restrictions.
+
+Although Henschen & Associates eventually fixed the vulnerability, they did not ever respond to reports. This type of behavior is disrespectful to reporters of vulnerabilities and should give customers pause; if no response is received, future reporters may instead decide to sell, exploit, or immediately publish their discoveries.
 
 ### Tyler Technologies – Court Case Management Plus
 
@@ -43,14 +51,6 @@ In 2019, a similar vulnerability in TIFFServer ([CVE-2020-9323](https://nvd.nist
 - [CVE-2023-6354](https://nvd.nist.gov/vuln/detail/CVE-2023-6354): Tyler Technologies Magistrate Court Case Management Plus allows an unauthenticated, remote attacker to upload, delete, and view files by manipulating the PDFViewer.aspx 'filename' parameter.
 - [CVE-2023-6375](https://nvd.nist.gov/vuln/detail/CVE-2023-6375): Tyler Technologies Court Case Management Plus may store backups in a location that can be accessed by a remote, unauthenticated attacker. Backups may contain sensitive information such as database credentials.
 - [CVE-2023-6352](https://nvd.nist.gov/vuln/detail/CVE-2023-6352): The default configuration of Aquaforest TIFF Server allows access to arbitrary file paths, subject to any restrictions imposed by Internet Information Services (IIS) or Microsoft Windows. Depending on how a web application uses and configures TIFF Server, a remote attacker may be able to enumerate files or directories, traverse directories, bypass authentication, or access restricted files.
-
-### Henschen & Associates – CaseLook
-
-Document URLs were obfuscated using a bizarre format that interposed parts of the case number with a hexadecimal docket ID that started at zero and incremented for every document in the case, the length of the docket ID in hexadecimal, the size of the file in hexadecimal, and the length in hexadecimal of the size of the file in hexadecimal. The only information an attacker wouldn't know is the size of the file. A brute force was possible, however, the enumerable space grew with each page in the document.
-
-The bigger problem was the way documents were served to the user. When a user requests a document URL, a copy of the file is placed into a cache directory before being served to the user. Files in the cache directory were stored with incrementing numeric filenames that ranged from 0 to 32,767 (for reference: the Super Nintendo, released in 1991, can count to 65,535). The counter incremented in an unknown way over time and was also incremented by 8 each time a new document was requested. If an attacker were to scan those filenames, they would have eventually discover documents, including those with restrictions.
-
-Although Henschen & Associates eventually fixed the vulnerability, they did not ever respond to reports. This type of behavior is disrespectful to reporters of vulnerabilities and should give customers pause; if no response is received, future reporters may instead decide to sell, exploit, or immediately publish their discoveries.
 
 ### Brevard County
 

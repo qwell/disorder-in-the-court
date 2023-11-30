@@ -34,6 +34,8 @@ The bigger problem was the way documents were served to the user. When a user re
 
 Although Henschen & Associates eventually fixed the vulnerability, they did not ever respond to reports. This type of behavior is disrespectful to reporters of vulnerabilities and should give customers pause; if no response is received, future reporters may instead decide to sell, exploit, or immediately publish their discoveries.
 
+- [CVE-2023-6376](https://nvd.nist.gov/vuln/detail/CVE-2023-6376): Henschen & Associates court document management software does not sufficiently randomize file names of cached documents, allowing a remote, unauthenticated attacker to access restricted documents.
+
 ### Tyler Technologies – Court Case Management Plus
 
 Multiple vulnerabilities were found in Court Case Management Plus.

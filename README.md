@@ -76,9 +76,9 @@ A similar vulnerability was discovered initially, however their attempted fix in
 
 In what is certainly the most egregious of the Florida county vulnerabilities, document URLs contained nothing more than a numeric document ID. An attacker could view restricted documents by simply incrementing the document ID in the URL. The only protection was a CAPTCHA on the landing page, which could be bypassed.
 
-Due to the triviality of discovering this vulnerability and the ease with which it could be exploited on a mass scale, it is reasonable to assume that every document became compromised the moment it was filed.
+Given the ease with which this vulnerability could be discovered and exploited, it is reasonable to assume that every document was compromised the moment it was filed.
 
-In defense of Sarasota County, they were the first to attempt to fix their issue. Unfortunately, their first attempt at a fix was not sufficient and a new vulnerability was discovered. Worst yet, while searching for a new method, a third vulnerability (or a second consequence of the second vulnerability) was discovered that allowed an unauthenticated attacker to view restricted cases.
+In defense of Sarasota County, they were the first to attempt to fix their issue. Unfortunately, their first attempt at a fix was not sufficient and a new vulnerability was discovered. Worse yet, while searching for a new method, a third vulnerability (or a second consequence of the second vulnerability) was discovered that allowed an unauthenticated attacker to view restricted cases.
 
 ## Timeline
 

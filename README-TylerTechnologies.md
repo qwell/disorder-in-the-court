@@ -6,13 +6,13 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-- **[Tyler Technologies - Court Case Management Plus](#tyler-technologies-–-court-case-management-plus)** is used in Georgia. In February 2022, a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
+- **[Tyler Technologies - Court Case Management Plus](#tyler-technologies--court-case-management-plus)** is used in Georgia. In February 2022, a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied based on the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
 
-### [Tyler Technologies](https://www.tylertech.com/) – Court Case Management Plus
+### [Tyler Technologies](https://www.tylertech.com/) - Court Case Management Plus
 
 Multiple vulnerabilities were found in Court Case Management Plus.
 

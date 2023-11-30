@@ -6,13 +6,13 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-- **[Catalis - CMS360](#catalis-–-cms360)** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
+- **[Catalis - CMS360](#catalis--cms360)** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied based on the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
 
-### [Catalis](https://catalisgov.com/) – CMS360
+### [Catalis](https://catalisgov.com/) - CMS360
 
 To view documents, URLs with numeric document and case IDs were used. This allowed an unskilled attacker to stumble upon restricted documents by simply incrementing the document ID in the document URL.
 
@@ -24,12 +24,12 @@ Many courts configured CMS360 to disallow document viewing altogether, making it
 
 - 2023-07-17 - Vulnerability discovered in Catalis' CMS360.
 - 2023-09-14 - Report for CMS360 sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli", for further research.
-- 2023-09-30 - Report #1 for CMS360 sent to Catalis – _no response_.
-- 2023-10-02 - Report #2 for CMS360 sent to Catalis – _no response_.
+- 2023-09-30 - Report #1 for CMS360 sent to Catalis - _no response_.
+- 2023-10-02 - Report #2 for CMS360 sent to Catalis - _no response_.
 - 2023-10-02 - Report for all vulnerabilities sent to [CERT Coordination Center](https://www.kb.cert.org/vuls/) (CERT/CC).
-- 2023-10-03 - Report #3 for CMS360 sent to Catalis, detailing report to CERT/CC – _no response_.
+- 2023-10-03 - Report #3 for CMS360 sent to Catalis, detailing report to CERT/CC - _no response_.
 - 2023-10-04 - Report for all vulnerabilities sent to [Cybersecurity and Infrastructure Security Agency](https://cisa.gov) (CISA) by CERT/CC.
-- 2023-10-06 - Report #4 for CMS360 sent to Catalis, with disclosure timeline and CISA hand-off details – _no response_.
+- 2023-10-06 - Report #4 for CMS360 sent to Catalis, with disclosure timeline and CISA hand-off details - _no response_.
 - 2023-11-01 - Response from Catalis, after discussion with CEO Scott Roza.
 - 2023-11-03 - **Vulnerability confirmed fixed in CMS360.**
 

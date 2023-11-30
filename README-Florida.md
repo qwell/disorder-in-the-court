@@ -41,8 +41,8 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 ## Timeline
 
 - 2023-06-21 - Vulnerability #1 discovered in Monroe County.
-- 2023-07-04 - Report #1 sent to Monroe County – _no response_.
-- 2023-07-14 - Report #2 sent to Monroe County – _no response_.
+- 2023-07-04 - Report #1 sent to Monroe County - _no response_.
+- 2023-07-14 - Report #2 sent to Monroe County - _no response_.
 - 2023-08-?? - **Vulnerability #1 confirmed fixed in Monroe County.**
 - 2023-08-?? - Vulnerability #2 discovered in Monroe County.
 - 2023-09-14 - Report for Monroe County vulnerability sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli", for further research.

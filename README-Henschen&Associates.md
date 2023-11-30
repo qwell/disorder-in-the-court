@@ -6,13 +6,13 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-- **[Henschen & Associates - CaseLook](#henschen--associates-–-caselook)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
+- **[Henschen & Associates - CaseLook](#henschen--associates--caselook)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied based on the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.
 
 ## Platforms
 
-### [Henschen & Associates](https://henschen.com/) – CaseLook
+### [Henschen & Associates](https://henschen.com/) - CaseLook
 
 Document URLs were obfuscated using a bizarre format that interposed parts of the case number with a docket ID that started at zero and incremented for every document in the case, the length of the docket ID, the size of the file, and the length of the size of the file. The only information an attacker wouldn't know is the size of the file. A brute force was possible, however, the enumerable space grew with each page in the document.
 
@@ -25,10 +25,10 @@ Although Henschen & Associates eventually fixed the vulnerability, they did not 
 ## Timeline
 
 - 2023-10-10 - Vulnerability discovered in Henschen & Associates' CaseLook.
-- 2023-10-11 - Report #1 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-13 - Report #2 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-16 - Report #3 for CaseLook sent to Henschen & Associates – _no response_.
-- 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates – _no response_.
+- 2023-10-11 - Report #1 for CaseLook sent to Henschen & Associates - _no response_.
+- 2023-10-13 - Report #2 for CaseLook sent to Henschen & Associates - _no response_.
+- 2023-10-16 - Report #3 for CaseLook sent to Henschen & Associates - _no response_.
+- 2023-10-17 - Report #4 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report #5 for CaseLook sent to Henschen & Associates - _no response_.
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
 - 2023-11-22 - **Vulnerability confirmed fixed in CaseLook.**

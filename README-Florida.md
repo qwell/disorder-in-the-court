@@ -6,7 +6,7 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-Each of the platforms are developed by separate entities.
+Many of the platforms are developed by separate entities.
 
 - Five platforms are each presumed to be developed "in-house"[^2] by individual Florida county courts.
 

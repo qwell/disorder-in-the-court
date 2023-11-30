@@ -6,7 +6,7 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-Each of the platforms are developed by separate entities.
+Many of the platforms are developed by separate entities.
 
 - **[Catalis](https://catalisgov.com/)' CMS360** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
 

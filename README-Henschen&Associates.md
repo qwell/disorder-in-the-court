@@ -6,7 +6,7 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-Each of the platforms are developed by separate entities.
+Many of the platforms are developed by separate entities.
 
 - **[Henschen & Associates](https://henschen.com/)' CaseLook** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 

@@ -6,7 +6,7 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-Each of the eight platforms are developed by separate entities.
+Many of the platforms are developed by separate entities.
 
 - **[Tyler Technologies](https://www.tylertech.com/)' Court Case Management Plus** is used in Georgia. In February, 2022 a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.
 

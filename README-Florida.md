@@ -30,7 +30,7 @@ Session cookies are used to determine which cases and documents a user was viewi
 
 ### Monroe County, Florida
 
-A similar vulnerability was discovered initially, however their attempted fix introduced this new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before the security level was checked, which paused code execution and gave an attacker a chance to adjust the security level and exploit this vulnerability. The debugger statement has since been removed and the backend no longer returns valid document IDs for restricted documents, however the backend still accepts restricted document IDs.
+A similar vulnerability was discovered initially, however their attempted fix introduced a new vulnerability. Much like Hillsborough County, the frontend chooses whether to display a document link based on the security level of the document and the backend incorrectly assumes that all requests should be trusted. After fixing the first vulnerability, the developers helpfully left a debugger statement immediately before the security level was checked, which paused code execution and gave an attacker a chance to adjust the security level and exploit this vulnerability. The debugger statement has since been removed and the backend no longer returns valid document IDs for restricted documents, however the backend still accepts restricted document IDs.
 
 ### Sarasota County, Florida
 

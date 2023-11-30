@@ -26,7 +26,7 @@ Session cookies are used to determine which cases and documents a user is viewin
 
 ### Lee County
 
-Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Documents can be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
+Session cookies are used to determine which cases and documents a user was viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Restricted documents could be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
 
 ### Monroe County
 
@@ -61,6 +61,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-10-11 - Vulnerability #2 discovered in Sarasota County.
 - 2023-10-27 - **Vulnerability #2 confirmed fixed by Sarasota County.**
 - 2023-11-28 - **Vulnerability #2 confirmed partially fixed by Monroe County.**
+- 2023-11-29 - **Vulnerability confirmed fixed by Lee County.**
 
 ## Overview by Platform
 
@@ -68,7 +69,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 | ------------------- | -------- | ------------- | ------ | ---------- |
 | Brevard County      |          | Yes           | RU     |            |
 | Hillsborough County |          | Limited       | R      |            |
-| Lee County          |          | Limited       | RZ     |            |
+| Lee County          |          | Limited       | RZ     | 2023-11-29 |
 | Monroe County       |          | Yes           | R      | 2023-11-28 |
 | Sarasota County     |          | No            | R      | 2023-10-27 |
 

@@ -64,7 +64,7 @@ Session cookies are used to determine which cases and documents a user is viewin
 
 ### Lee County
 
-Session cookies are used to determine which cases and documents a user is viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Documents can be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
+Session cookies are used to determine which cases and documents a user was viewing. When a case or document is requested, a request is sent to the API, which associates the data with the user's session cookie and returns the results. For most types of cases, document IDs are available in the pre-rendered HTML. Restricted documents could be viewed by executing the `pushDataAndShow()` function from the site's JavaScript source code.
 
 ### Monroe County
 
@@ -120,6 +120,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-11-13 - Report for CaseLook sent to Ohio State CISO and Madison County, Ohio Court Clerk - _no response_.
 - 2023-11-22 - **Vulnerability in CaseLook confirmed fixed by Henschen & Associates.**
 - 2023-11-28 - **Vulnerability #2 confirmed partially fixed by Monroe County.**
+- 2023-11-29 - **Vulnerability confirmed fixed by Lee County.**
 
 ## Overview by Platform
 
@@ -130,7 +131,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 | Henschen & Associates   | CaseLook                   | No            | R      | 2023-11-22 |
 | Brevard County          |                            | Yes           | RU     |            |
 | Hillsborough County     |                            | Limited       | R      |            |
-| Lee County              |                            | Limited       | RZ     |            |
+| Lee County              |                            | Limited       | RZ     | 2023-11-29 |
 | Monroe County           |                            | Yes           | R      | 2023-11-28 |
 | Sarasota County         |                            | No            | R      | 2023-10-27 |
 

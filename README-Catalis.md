@@ -25,7 +25,7 @@ Many courts configured CMS360 to disallow document viewing altogether, making it
 ## Timeline
 
 - 2023-07-17 - Vulnerability discovered in Catalis' CMS360.
-- 2023-09-14 - Report for all vulnerabilities sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli".
+- 2023-09-14 - Report for CMS360 sent to [Jason Parker](https://ꩰ.com/@north) at [Jeltz](https://jeltz.org) by "Eli", for further research.
 - 2023-09-30 - Report #1 for CMS360 sent to Catalis – _no response_.
 - 2023-10-02 - Report #2 for CMS360 sent to Catalis – _no response_.
 - 2023-10-02 - Report for all vulnerabilities sent to [CERT Coordination Center](https://www.kb.cert.org/vuls/) (CERT/CC).

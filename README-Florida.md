@@ -6,8 +6,6 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-Many of the platforms are developed by separate entities.
-
 - Five platforms used by individual courts in Florida -- [Brevard County](#brevard-county-florida), [Hillsborough County](#hillsborough-county-florida), [Lee County](#lee-county-florida), [Monroe County](#monroe-county-florida), and [Sarasota County](#sarasota-county-florida) -- are each presumed to be developed "in-house"[^2] by the county court.
 
 While all of the platforms allowed unintended public access to restricted documents, the severity varied based on the levels of restrictions that could be bypassed and the discoverability of document IDs. The methods used to exploit each of the vulnerabilities also varied, but could all be performed by an unauthenticated attacker using only a browser's developer tools.

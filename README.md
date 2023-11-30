@@ -6,8 +6,6 @@ Insufficient permission check vulnerabilities in public court record platforms f
 
 ## Details
 
-Many of the platforms are developed by separate entities.
-
 - **[Catalis - CMS360](#catalis-–-cms360)** is used in Georgia, Mississippi, Ohio, and Tennessee. Catalis is a "government solutions" company that provides a wide array[^1] of public record, payment, and regulatory/compliance platforms.
 - **[Henschen & Associates - CaseLook](#henschen--associates-–-caselook)** is used in Ohio. Henschen & Associates did not respond after multiple reports, however the vulnerability has been fixed.
 - **[Tyler Technologies - Court Case Management Plus](#tyler-technologies-–-court-case-management-plus)** is used in Georgia. In February 2022, a different Tyler Technologies court records platform had a similar vulnerability that allowed the website [judyrecords.com](judyrecords.com) to accidentally scrape sensitive data.

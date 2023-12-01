@@ -38,6 +38,7 @@ In 2019, a similar vulnerability in TIFFServer ([CVE-2020-9323](https://nvd.nist
 - 2023-10-08 - Response from Tyler Technologies.
 - 2023-10-10 - Report for Court Case Management Plus sent to CISA.
 - 2023-11-01 - **Vulnerabilities #1, #2, and #3 confirmed fixed in Court Case Management Plus.**
+- 2023-11-30 - Disclosure published.
 
 ## Overview by Platform
 

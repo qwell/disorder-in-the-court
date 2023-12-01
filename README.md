@@ -121,6 +121,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-11-22 - **Vulnerability confirmed fixed in CaseLook.**
 - 2023-11-28 - **Vulnerability #2 confirmed partially fixed in Monroe County.**
 - 2023-11-29 - **Vulnerability confirmed fixed in Lee County.**
+- 2023-11-30 - Disclosure published.
 
 ## Overview by Platform
 

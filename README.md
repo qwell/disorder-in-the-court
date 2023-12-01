@@ -54,9 +54,9 @@ In 2019, a similar vulnerability in TIFFServer ([CVE-2020-9323](https://nvd.nist
 
 ### Brevard County, Florida
 
-Document URLs contain a version of the document ID that is encrypted using a method that includes an expiry mechanism. Although every docket entry displays the associated document ID, the encrypted form -- which is required to view documents -- is only provided for documents that the user has access to. This would be a great method that enables sharing of documents for a limited time, but for one fatal flaw.
+Document URLs contained a version of the document ID that is encrypted using a method that includes an expiry mechanism. Although every docket entry displayed the associated document ID, the encrypted form -- which was required to view documents -- was only provided for documents that the user had access to. This would have been a great method that enables sharing of documents for a limited time, but for one fatal flaw.
 
-Along with the encrypted document ID, the URLs also contain the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker can encrypt a document ID and use it to view a restricted document. Additionally, URLs include the parameter `isRedacted=` which, as the name suggests, accepts the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
+Along with the encrypted document ID, the URLs also contained the query parameters `theIV=` and `theKey=`, which an astute observer might recognize as AES. Using the IV and key from the URL, an attacker was able to encrypt a document ID and use it to view a restricted document. Additionally, URLs included the parameter `isRedacted=` which, as the name suggests, accepted the encrypted form of the strings "Yes" or "No" to view unredacted copies of documents.
 
 ### Hillsborough County, Florida
 
@@ -122,6 +122,7 @@ In defense of Sarasota County, they were the first to attempt to fix their issue
 - 2023-11-28 - **Vulnerability #2 confirmed partially fixed in Monroe County.**
 - 2023-11-29 - **Vulnerability confirmed fixed in Lee County.**
 - 2023-11-30 - Disclosure published.
+- 2023-11-30 - **Vulnerability confirmed potentially fixed in Brevard County.**
 
 ## Overview by Platform
 

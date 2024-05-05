@@ -1,3 +1,5 @@
+Canonical URL has changed.  See [here](https://github.com/qwell/disclosures/blob/main/README-2023-11-30-disorder-in-the-court.md) for updates.
+
 # Disorder in the Court
 
 ## Description
